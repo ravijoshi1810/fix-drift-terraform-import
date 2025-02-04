@@ -1,0 +1,19 @@
+# Site settings
+title: "Terraform Import and Refactoring"
+description: "A comprehensive guide to importing and refactoring Terraform configurations"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://ravijoshi1810.github.io/" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-minimal
+
+# Exclude these files from the site build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Plugins
+plugins:
+  - jekyll-feed
