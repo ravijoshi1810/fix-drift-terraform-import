@@ -2,8 +2,8 @@ title: Welcome to CodifyMe 🌟
 description: Automate Your Infrastructure with Ease
 author: Ravi Joshi
 email: ravijoshi1810@github.io
-#baseurl: ""
-baseurl: "/fix-drift-terraform-import" # The repository name if hosted on GitHub Pages
+baseurl: ""
+#baseurl: "/fix-drift-terraform-import" # The repository name if hosted on GitHub Pages
 url: "https://ravijoshi1810.github.io/" # Your GitHub Pages URL
 theme: minima
 markdown: kramdown
