@@ -110,13 +110,17 @@ ul li a:hover {
 /* Social Sharing */
 #social-sharing {
   margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .social-icons a {
   display: inline-block;
   margin-right: 15px;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: #555;
 }
 
@@ -135,6 +139,7 @@ ul li a:hover {
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #interactions h3 {
@@ -196,24 +201,40 @@ footer p {
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
   .container {
-      flex-direction: column;
-      gap: 30px;
+    flex-direction: column;
+    gap: 30px;
   }
 
   main {
-      width: 100%;
+    width: 100%;
   }
 
   .sidebar {
-      width: 100%;
-      margin-top: 20px;
+    width: 100%;
+    margin-top: 20px;
   }
 
   nav ul {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   nav ul li {
-      margin-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* Social Icons - Make them bigger on mobile */
+  .social-icons a {
+    font-size: 2em;
+    margin-right: 20px;
+  }
+
+  /* Adjust the form input and button for better mobile experience */
+  #interactions input,
+  #interactions textarea {
+    font-size: 1.2em;
+  }
+
+  #interactions button {
+    padding: 12px 24px;
   }
 }

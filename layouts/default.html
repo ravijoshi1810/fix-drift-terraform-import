@@ -14,7 +14,7 @@
         <nav>
             <ul>
                 <li><a href="{{ "/" | relative_url }}">Home</a></li>
-                <li><a href="{{ "/overview" | relative_url }}">Overview</a></li>
+                <li><a href="{{ "/overview" | relative_url }}">Overview</a></li> <!-- Only Overview -->
             </ul>
         </nav>
     </header>
@@ -30,48 +30,48 @@
             <article>
                 {{ content }}
             </article>
-
-            <!-- Social Sharing -->
-            <section id="social-sharing">
-                <h3>Share This Post</h3>
-                <div class="social-icons">
-                    <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title }}" target="_blank">
-                        <i class="fab fa-twitter"></i> Twitter
-                    </a>
-                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title }}" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank">
-                        <i class="fab fa-facebook"></i> Facebook
-                    </a>
-                </div>
-            </section>
-
-            <!-- Interaction Section (Comments) -->
-            <section id="interactions">
-                <h3>Questions & Comments</h3>
-                <p>Have a question or want to share your thoughts? Leave a comment below:</p>
-                <form action="#" method="POST">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" required>
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Your email" required>
-                    
-                    <label for="comment">Comment:</label>
-                    <textarea id="comment" name="comment" placeholder="Write your comment here..." rows="5" required></textarea>
-                    
-                    <button type="submit">Submit</button>
-                </form>
-            </section>
         </main>
+
+        <!-- Social Sharing -->
+        <section id="social-sharing" class="social-sharing">
+            <h3>Share This Post</h3>
+            <div class="social-icons">
+                <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title }}" target="_blank">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title }}" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+            </div>
+        </section>
+
+        <!-- Interaction Section (Comment Section) -->
+        <section id="interactions" class="comment-section">
+            <h3>Questions & Comments</h3>
+            <p>Have a question or want to share your thoughts? Leave a comment below:</p>
+            <form action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+                
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" placeholder="Write your comment here..." rows="5" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
 
         <!-- Sidebar -->
         <aside class="sidebar">
             <h3>Blog Posts</h3>
             <ul>
                 {% for post in site.posts %}
-                    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
                 {% endfor %}
             </ul>
         </aside>
