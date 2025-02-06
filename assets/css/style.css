@@ -1,0 +1,64 @@
+/* Table of Contents */
+#table-of-contents {
+  background: #f9f9f9;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  margin-top: 2rem;
+}
+#table-of-contents ul {
+  list-style: none;
+  padding: 0;
+}
+#table-of-contents ul li {
+  margin-bottom: 0.5rem;
+}
+#table-of-contents ul li a {
+  text-decoration: none;
+  color: #007acc;
+}
+
+/* Interaction Section */
+#interactions {
+  margin-top: 3rem;
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+#interactions form {
+  display: flex;
+  flex-direction: column;
+}
+#interactions form label {
+  margin-top: 1rem;
+}
+#interactions form input,
+#interactions form textarea {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+#interactions form button {
+  margin-top: 1rem;
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#interactions form button:hover {
+  background: #005a99;
+}
+
+/* Social Sharing */
+#social-sharing .social-icons a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #555;
+}
+#social-sharing .social-icons a:hover {
+  color: #007acc;
+}
+  

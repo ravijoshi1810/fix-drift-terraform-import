@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- For icons -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+        <nav>
+            <ul>
+                <li><a href="{{ "/" | relative_url }}">Home</a></li>
+                {% for page in site.pages %}
+                {% if page.title %}
+                <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Main Content -->
+        <main>
+            <!-- Blog Title -->
+            <h2>{{ page.title }}</h2>
+            <p><strong>Published on:</strong> {{ page.date | date: "%B %d, %Y" }}</p>
+
+            <!-- Content -->
+            <article>
+                {{ content }}
+            </article>
+
+            <!-- Interaction Section -->
+            <section id="interactions">
+                <h3>Questions & Comments</h3>
+                <p>Have a question or want to share your thoughts? Leave a comment below:</p>
+                <form action="#" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                    
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" placeholder="Write your comment here..." rows="5" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+            <!-- Social Sharing -->
+            <section id="social-sharing">
+                <h3>Share This Post</h3>
+                <div class="social-icons">
+                    <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title }}" target="_blank">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title }}" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Blog Posts</h3>
+            <ul>
+                {% for post in site.posts %}
+                <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; {{ site.time | date: "%Y" }} Terraform Blog Series. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Scroll to section for Table of Contents links
+        document.querySelectorAll("#table-of-contents a").forEach(link => {
+            link.addEventListener("click", function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+</body>
+</html>

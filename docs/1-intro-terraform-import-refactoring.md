@@ -182,11 +182,11 @@ A production environment contains critical resources, but the Terraform codebase
 ---
 
 ### Summary of Import Methods
-| **Method**              | **Use Case**                                                                 |
+| **Method**               | **Use Case**                                                                |
 |--------------------------|-----------------------------------------------------------------------------|
 | `terraform import`       | Manual and straightforward for individual resources.                        |
 | Config-Driven Import     | Simplifies imports and allows automated plan and apply directly in HCL.     |
-| Terraformer              | Ideal for bulk imports and generating HCL configurations for multiple resources. |
+| Terraformer              | Ideal for bulk imports and generating HCL configurations for multiple resources.|
 
 
 ---
@@ -195,13 +195,10 @@ A production environment contains critical resources, but the Terraform codebase
 
 In the following posts, we will dive deeper into the practical aspects of using **Terraform Import** to resolve common challenges in Day 2 operations:
 
-- **Post 2**: Getting Started with Terraform Import
-- **Post 3**: Practical Example of Importing AWS EC2 Instances
-- **Post 4**: Refactoring Terraform Code for Scalability
-- **Post 5**: Transitioning from `count` to `for_each` Logic
-- **Post 6**: State Management Best Practices
-- **Post 7**: Advanced Techniques for Complex Imports
-- **Post 8** Final Thoughts and Best Practices
+**Part2**: **[Getting Started with Terraform Import](2-Getting-started-with-import.md)**  
+   - Step-by-step guide to using `terraform import`.
+   - Prerequisites and setup.
+   - Common challenges and how to resolve them.
 
 Stay tuned as we continue to explore the power of **Terraform Import** in managing cloud infrastructure at scale!
 

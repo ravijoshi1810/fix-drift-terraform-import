@@ -1,3 +1,7 @@
+---
+layout: default
+title: Overview
+---
 # Terraform Import and Refactoring: A Practical Guide to IaC-Managed Cloud Services and Operations
 
 ## 1. Introduction to Terraform Import and Refactoring
@@ -29,36 +33,31 @@ This series is ideal for:
 
 ### Table of Contents
 
-1. **Introduction to Terraform Import and Refactoring**  
+1. **[Introduction](1-intro-terraform-import-refactoring.md)**
    Overview of the series and key takeaways.
 
-2. **Getting Started with Terraform Import**  
+2. **[Getting Started with Terraform Import](2-Getting-started-with-import.md)**  
    - Step-by-step guide to using `terraform import`.
    - Prerequisites and setup.
    - Common challenges and how to resolve them.
 
-3. **Practical Example: Importing AWS EC2 Instances**  
+3. **[Practical Example: Importing AWS EC2 Instances](3-Practicle-example-aws-ec2.md)**  
    - Hands-on example of importing an AWS EC2 instance.
    - Managing imported resources with Terraform state.
 
-4. **Refactoring Terraform Code for Scalability**  
+4. **[Refactoring Terraform Code for Scalability](4-code_refactoring.md)**  
    - Breaking monolithic configurations into modules.
    - Best practices for module reusability and naming conventions.
 
-5. **Transitioning from `count` to `for_each` Logic**  
-   - Why and how to switch from `count` to `for_each`.
-   - Practical examples for resource and module management.
-
-
-6. **State Management Best Practices**  
+5. **[State Management Best Practices](5-state-management-best-practices.md)**  
    - Managing Terraform state effectively.
    - Avoiding state drift and troubleshooting tips.
 
-7. **Advanced Techniques for Complex Imports**  
+6. **[Advanced Techniques for Complex Imports](6-advance-technique-for-complex-import.md)**  
    - Importing dependent resources.
    - Handling custom resource configurations.
 
-8. **Final Thoughts and Best Practices**  
+7. **[Final Thoughts and Best Practices](7-final-thoughts.md)**  
     - Summary of key insights.
     - Checklist for import and refactoring workflows.
 
@@ -75,9 +74,9 @@ This series is ideal for:
 
 ## 4. What’s Next?
 
-In the next post, we’ll dive into **"Getting Started with Terraform Import"**, where we’ll cover:
-- How to prepare your environment for importing resources.
-- Common pitfalls and troubleshooting strategies.
-- A step-by-step guide to using `terraform import` with examples.
+In the next post, we’ll dive into **"Introduction to Terraform Import and Refactoring"**. we will explore
+- Why day 2 operations are crucial for cloud management,
+- How Terraform Import simplifies the process of managing existing resources,
+- Standard Example Workflow for Terraform Import.
 
-Stay tuned for more practical insights and examples!
+Stay tuned!

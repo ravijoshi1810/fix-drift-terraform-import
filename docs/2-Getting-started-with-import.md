@@ -148,15 +148,10 @@ terraform {
 
 In the following posts, we will dive deeper into the **Practical Example of Importing AWS EC2** Instances to see the step by step process to complete the import work.
 
-- **Post 3**: Practical Example of Importing AWS EC2 Instances
-- **Post 4**: Refactoring Terraform Code for Scalability
-- **Post 5**: Transitioning from `count` to `for_each` Logic
-- **Post 6**: State Management Best Practices
-- **Post 7**: Advanced Techniques for Complex Imports
-- **Post 8** Final Thoughts and Best Practices
-
+**Part3**: **[Practical Example: Importing AWS EC2 Instances](3-Practicle-example-aws-ec2.md)**  
+   - Hands-on example of importing an AWS EC2 instance.
+   - Managing imported resources with Terraform state.
 Stay tuned as we continue to explore the power and versatility of **Terraform Import** in transforming cloud infrastructure management at scale!
-
 
 ---
 
