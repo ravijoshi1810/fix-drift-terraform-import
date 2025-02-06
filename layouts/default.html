@@ -14,11 +14,7 @@
         <nav>
             <ul>
                 <li><a href="{{ "/" | relative_url }}">Home</a></li>
-                {% for page in site.pages %}
-                {% if page.title and page.url != "/" and page.title != "Home" %}
-                <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
-                {% endif %}
-                {% endfor %}
+                <li><a href="{{ "/overview" | relative_url }}">Overview</a></li>
             </ul>
         </nav>
     </header>
@@ -35,7 +31,23 @@
                 {{ content }}
             </article>
 
-            <!-- Interaction Section -->
+            <!-- Social Sharing -->
+            <section id="social-sharing">
+                <h3>Share This Post</h3>
+                <div class="social-icons">
+                    <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title }}" target="_blank">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title }}" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                </div>
+            </section>
+
+            <!-- Interaction Section (Comments) -->
             <section id="interactions">
                 <h3>Questions & Comments</h3>
                 <p>Have a question or want to share your thoughts? Leave a comment below:</p>
@@ -52,22 +64,6 @@
                     <button type="submit">Submit</button>
                 </form>
             </section>
-
-            <!-- Social Sharing -->
-            <section id="social-sharing">
-                <h3>Share This Post</h3>
-                <div class="social-icons">
-                    <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title }}" target="_blank">
-                        <i class="fab fa-twitter"></i> Twitter
-                    </a>
-                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title }}" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank">
-                        <i class="fab fa-facebook"></i> Facebook
-                    </a>
-                </div>
-            </section>
         </main>
 
         <!-- Sidebar -->
@@ -75,7 +71,7 @@
             <h3>Blog Posts</h3>
             <ul>
                 {% for post in site.posts %}
-                <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
                 {% endfor %}
             </ul>
         </aside>
