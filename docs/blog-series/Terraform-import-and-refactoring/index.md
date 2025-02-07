@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Overview
+title: Terraform Import and Refactoring
+permalink: /docs/blog-series/Terraform-import-and-refactoring/index/
 ---
+
 # Terraform Import and Refactoring: A Practical Guide to IaC-Managed Cloud Services and Operations
 
 ## 1. Introduction to Terraform Import and Refactoring

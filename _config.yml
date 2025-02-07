@@ -1,11 +1,12 @@
-title: Welcome to CodifyMe 🌟 
+title: Welcome to CodifyMe 🌟
 description: Automate Your Infrastructure with Ease
+logo: "/assets/images/codifyme_logo.png"
 author: Ravi Joshi
 email: ravijoshi1810@github.io
-#baseurl: ""
-baseurl: "/fix-drift-terraform-import" # The repository name if hosted on GitHub Pages
-url: "https://ravijoshi1810.github.io/" # Your GitHub Pages URL
-theme: minima
+baseurl: "" # Leave empty for root hosting
+#baseurl: "/fix-drift-terraform-import" # Uncomment if hosted under a subfolder
+url: "https://ravijoshi1810.github.io/"
+theme: just-the-docs
 markdown: kramdown
 plugins:
   - jekyll-feed
@@ -13,3 +14,11 @@ plugins:
   - jekyll-seo-tag
 permalink: pretty
 paginate: 5
+nav_enabled: true
+heading_anchors: true
+just_the_docs:
+  navigation:
+    - title: "Home"
+      url: "/"
+    - title: "Blog Series"
+      url: "/docs/blog-series/"

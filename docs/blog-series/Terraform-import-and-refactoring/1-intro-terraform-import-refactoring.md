@@ -1,3 +1,12 @@
+---
+layout: default
+title: "1. Introduction to Terraform Import and Refactoring - Why It Matters"
+permalink: /docs/blog-series/Terraform-import-and-refactoring/1-intro-terraform-import-refactoring/
+parent: Terraform Import and Refactoring
+nav_order: 1
+
+---
+
 # Introduction to Terraform Import and Refactoring - Why It Matters
 
 ## Overview

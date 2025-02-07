@@ -1,3 +1,11 @@
+---
+layout: default
+title: "2. ABC Corp’s IaC Evolution: Bringing Infrastructure Under Control"
+permalink: /docs/blog-series/Terraform-import-and-refactoring/2-getting-started-with-import/
+parent: Terraform Import and Refactoring
+nav_order: 2
+
+---
 # ABC Corp’s IaC Evolution: Bringing Infrastructure Under Control:
 
 ### **Getting Started with Terraform Import**

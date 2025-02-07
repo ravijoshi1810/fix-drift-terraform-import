@@ -1,98 +1,69 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- For icons -->
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
-        <nav>
-            <ul>
-                <li><a href="{{ "/" | relative_url }}">Home</a></li>
-                <li><a href="{{ "/overview" | relative_url }}">Overview</a></li> <!-- Only Overview -->
-            </ul>
-        </nav>
+    <title>{{ page.title }} | {{ site.title }}</title>
+
+    {%- seo -%}
+
+    <link rel="stylesheet" href="{{ '/assets/css/just-the-docs.css' | relative_url }}">
+    <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
+
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="author" content="{{ site.author }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">
+          <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+        </h1>
+        <p class="site-description">{{ site.description }}</p>
+      </div>
     </header>
 
-    <div class="container">
-        <!-- Main Content -->
-        <main>
-            <!-- Blog Title -->
-            <h2>{{ page.title }}</h2>
-            <p><strong>Published on:</strong> {{ page.date | date: "%B %d, %Y" }}</p>
+    <nav class="site-navigation">
+      <ul>
+        {%- for nav_item in site.just_the_docs.navigation -%}
+          <li>
+            <a href="{{ nav_item.url | relative_url }}">{{ nav_item.title }}</a>
+            {%- if nav_item.children -%}
+              <ul>
+                {%- for child in nav_item.children -%}
+                  <li>
+                    <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+                    {%- if child.children -%}
+                      <ul>
+                        {%- for subchild in child.children -%}
+                          <li>
+                            <a href="{{ subchild.url | relative_url }}">{{ subchild.title }}</a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
 
-            <!-- Content -->
-            <article>
-                {{ content }}
-            </article>
-        </main>
+    <main class="site-content">
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
 
-        <!-- Social Sharing -->
-        <section id="social-sharing" class="social-sharing">
-            <h3>Share This Post</h3>
-            <div class="social-icons">
-                <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title }}" target="_blank">
-                    <i class="fab fa-twitter"></i> Twitter
-                </a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title }}" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank">
-                    <i class="fab fa-facebook"></i> Facebook
-                </a>
-            </div>
-        </section>
-
-        <!-- Interaction Section (Comment Section) -->
-        <section id="interactions" class="comment-section">
-            <h3>Questions & Comments</h3>
-            <p>Have a question or want to share your thoughts? Leave a comment below:</p>
-            <form action="#" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your email" required>
-                
-                <label for="comment">Comment:</label>
-                <textarea id="comment" name="comment" placeholder="Write your comment here..." rows="5" required></textarea>
-                
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <h3>Blog Posts</h3>
-            <ul>
-                {% for post in site.posts %}
-                <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </aside>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; {{ site.time | date: "%Y" }} Terraform Blog Series. All rights reserved.</p>
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; {{ "now" | date: "%Y" }} {{ site.author }}. All rights reserved.</p>
+        <p>
+          Built with <a href="https://jekyllrb.com/">Jekyll</a> and the <a href="https://just-the-docs.github.io/just-the-docs/">Just the Docs</a> theme.
+        </p>
+      </div>
     </footer>
-
-    <!-- JavaScript -->
-    <script>
-        // Scroll to section for Table of Contents links
-        document.querySelectorAll("#table-of-contents a").forEach(link => {
-            link.addEventListener("click", function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+  </body>
+</html> -->

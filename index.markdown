@@ -3,7 +3,8 @@ layout: default
 title: Home
 ---
 
-![alt text](docs/images/codifyme.png)
+![CodifyMe Logo](/docs/blog-series/Terraform-import-and-refactoring/images/codifyme_logo.png)
+
 
 CodifyMe is your one-stop resource for learning **Infrastructure as Code**, **DevOps practices**, and **Cloud Automation**. This space is dedicated to breaking down complex topics into **simple, actionable tutorials** that help you take control of your infrastructure.  
 
