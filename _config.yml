@@ -3,8 +3,8 @@ description: Automate Your Infrastructure with Ease
 logo: "/assets/images/codifyme_logo.png"
 author: Ravi Joshi
 email: ravijoshi1810@github.io
-baseurl: "" # Leave empty for root hosting
-#baseurl: "/fix-drift-terraform-import" # Uncomment if hosted under a subfolder
+#baseurl: "" # Leave empty for root hosting
+baseurl: "/fix-drift-terraform-import" # Uncomment if hosted under a subfolder
 url: "https://ravijoshi1810.github.io/"
 theme: just-the-docs
 markdown: kramdown
